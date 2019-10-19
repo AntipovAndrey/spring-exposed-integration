@@ -1,0 +1,21 @@
+GET http://localhost:8080/posts
+
+### Should successfully create a post in the database
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+  "title": "Hi",
+  "content": "Bye"
+}
+
+### Should fail with exception
+POST http://localhost:8080/posts/test
+Content-Type: application/json
+
+{
+  "title": "Should not be inserted",
+  "content": "In the database"
+}
+
+###
