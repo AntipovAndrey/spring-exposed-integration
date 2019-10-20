@@ -1,4 +1,4 @@
-package com.github.antipovandrey.springexposed.config
+package com.github.antipovandrey.springexposed.config.web
 
 import org.jetbrains.exposed.sql.transactions.TransactionManager
 import org.slf4j.Logger
