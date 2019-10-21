@@ -8,12 +8,12 @@ object PostTable : IntIdTable() {
     val content = text("content")
 }
 
-object UserAccountTable : IntIdTable() {
+object UserAccountTable : IntIdTable("user_account") {
 
     val login = varchar("login", 64)
 }
 
-object AccountApiTokenTable : IntIdTable() {
+object AccountApiTokenTable : IntIdTable("account_api_token") {
 
     val account = reference("user_account_id", UserAccountTable)
     val token = varchar("token", 64)
