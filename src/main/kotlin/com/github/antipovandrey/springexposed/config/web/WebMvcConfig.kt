@@ -21,7 +21,7 @@ class WebMvcConfig(
     fun registerOpenEntityManagerInViewFilterBean(): FilterRegistrationBean<*> {
         return FilterRegistrationBean<ExposedTransactionPerRequestFilter>().apply {
             this.filter = ExposedTransactionPerRequestFilter(exposedDatabase)
-            this.order = 1 // TODO: fixup order
+            this.order = 4 // look application.properties - security's filter has 5 order
         }
     }
 }
