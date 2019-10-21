@@ -18,4 +18,14 @@ Content-Type: application/json
   "content": "In the database"
 }
 
+### Should create a post with title containing account's login
+POST http://localhost:8080/posts/secured
+Content-Type: application/json
+X-Api-Token: deadbeef-auth-token
+
+{
+  "title": "A nice post",
+  "content": "from authenticated user"
+}
+
 ###
